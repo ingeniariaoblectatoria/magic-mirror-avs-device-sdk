@@ -244,7 +244,7 @@ bool CurlEasyHandleWrapper::setTransferType(TransferType type) {
             ret = setopt(CURLOPT_HTTPGET, 1L);
             break;
         case TransferType::kPOST:
-            ret = setopt(CURLOPT_HTTPPOST, m_post);
+            ret = setopt(CURLOPT_MIMEPOST, m_post);
             break;
         case TransferType::kPUT:
             ret = setopt(CURLOPT_UPLOAD, 1L);
@@ -299,7 +299,7 @@ void CurlEasyHandleWrapper::cleanupResources() {
     }
 
     if (m_post) {
-        curl_formfree(m_post);
+        curl_mime_free(m_post);
         m_post = nullptr;
         m_lastPost = nullptr;
     }

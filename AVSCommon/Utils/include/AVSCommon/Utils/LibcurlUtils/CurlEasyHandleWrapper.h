@@ -353,9 +353,9 @@ private:
     /// A list of headers needed to be added to a POST action
     curl_slist* m_postHeaders;
     /// The associated multipart post
-    curl_httppost* m_post;
+    curl_mime* m_post;
     /// The last post used in curl_formadd
-    curl_httppost* m_lastPost;
+    curl_mime* m_lastPost;
     /// Name for this handle.
     std::string m_id;
     /// Synchronizes access to the @c m_interfaceName
