@@ -92,8 +92,8 @@
                   "value": {
                     "unit": "PIXEL",
                     "value": {
-                      "width": 1920,
-                      "height": 1080
+                      "width": 1080,
+                      "height": 1920
                     }
                   }
                 }
@@ -116,6 +116,16 @@
                     "value": {
                       "width": 1920,
                       "height": 400
+                    }
+                  }
+                }, {
+                  "type": "DISCRETE",
+                  "id": "portraitPanel",
+                  "value": {
+                    "unit": "PIXEL",
+                    "value": {
+                      "width": 1080,
+                      "height": 1920
                     }
                   }
                 }
@@ -143,8 +153,8 @@
             "resolution": {
               "unit": "PIXEL",
               "value": {
-                "width": 1920,
-                "height": 1080
+                "width": 1080,
+                "height": 1920
               }
             },
             "physicalSize": {
@@ -182,7 +192,7 @@
     "mode": "TV",
     "emulateDisplayDimensions": true,
     "scaleToFill": true,
-    "audioInputInitiator": "PRESS_AND_HOLD",
+    "audioInputInitiator": "TAP",
     "displayMode": "FIXED",
     "deviceKeys": {
       "talkKey": {
@@ -217,7 +227,7 @@
         "displayWindowConfig": {
           "templateId": "tvFullscreen",
           "configurations": {
-            "landscape" : {
+            "portrait" : {
               "sizeConfigurationId": "fullscreen",
               "interactionMode": "tv"
             }
@@ -239,8 +249,8 @@
         "displayWindowConfig": {
           "templateId": "tvOverlayLandscape",
           "configurations": {
-            "landscape" : {
-              "sizeConfigurationId": "landscapePanel",
+            "portrait" : {
+              "sizeConfigurationId": "portraitPanel",
               "interactionMode": "tv_overlay"
             }
           }
